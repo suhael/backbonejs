@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 var books = [
-{id: 98, author: 'Stephen King', name: 'The Shining', year: 1977}, 
+{id: 98, author: 'Stephen King', name: 'The Shining', year: 1977},
 {id: 99, author: 'George Orwell', name: '1984', year: 1949}];
 /**
  * HTTP GET /books
