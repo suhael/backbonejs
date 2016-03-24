@@ -6,10 +6,28 @@
 </head>
 <body>
 helolo
+    <div id="myLibraryViewSection"></div>
+
+    <script type="text/x-handlebars-template" id="library-template">
+        <ul>
+            {{#each library}}
+            <li id="book">
+                <em>{{name}}</em> by {{author}}
+            </li>
+            {{/each}}
+        </ul>
+    </script>
 
     <script src="js/external/jquery-1.10.2.js"></script>
+    <script src="js/external/handlebars.js"></script>
     <script src="js/external/underscore.js"></script>
     <script src="js/external/backbone.js"></script>
+
+    <script src="js/app/model/book.js"></script>
+    <script src="js/app/collection/library.js"></script>
+    <script src="js/app/view/libraryView.js"></script>
+    <script src="js/app/router/router.js"></script>
+
     <script src="js/app/app.js"></script>
 
 </body>
