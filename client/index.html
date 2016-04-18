@@ -7,15 +7,23 @@
 <body>
 helolo
     <div id="myLibraryViewSection"></div>
+    <div id="myBookViewSection"></div>
 
     <script type="text/x-handlebars-template" id="library-template">
         <ul>
             {{#each library}}
-            <li id="book">
+            <li class="book" data-book="{{id}}">
                 <em>{{name}}</em> by {{author}}
             </li>
             {{/each}}
         </ul>
+    </script>
+
+    <script type="text/x-handlebars-template" id="book-template">
+        <div>The book id is {{book.id}}</div>
+        <div>The book name is {{book.name}}</div>
+        <div>The book author is {{author}}</div>
+        <div>The book year is {{book.year}}</div>
     </script>
 
     <script src="js/external/jquery-1.10.2.js"></script>
@@ -26,6 +34,7 @@ helolo
     <script src="js/app/model/book.js"></script>
     <script src="js/app/collection/library.js"></script>
     <script src="js/app/view/libraryView.js"></script>
+    <script src="js/app/view/bookView.js"></script>
     <script src="js/app/router/router.js"></script>
 
     <script src="js/app/app.js"></script>
